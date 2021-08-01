@@ -39,7 +39,7 @@ function start(client) {
       await client.sendText(message.from, '👋 Hello!');
     }
     else if (message.body.toUpperCase() === 'HI BOT') {
-      await client.sendText(message.from, '👋 Hello!\n🤩 Glad You Call on Me!\n\nBy the way, I\'m thinking to beat Google translate! 😁\n\n You could ask me any Word or Sentence to Translate like bellow :\n\n=> Just add \"bn\" in front of your Word or Sentence to translate into Bengali.\n\n=> Or add \"en\" in front of your Word or Sentence translate into English.');
+      await client.sendText(message.from, '👋 Hello!\n🤩 Glad You Remembered Me!\n\nBy the way, I\'m thinking to beat Google translate! 😁\n\n You could ask me any Word or Sentence to Translate like bellow :\n\n=> Just add \"bn\" in front of your Word or Sentence to translate into Bengali.\n\n=> Or add \"en\" in front of your Word or Sentence translate into English.');
     }
    else if (message.body.toLowerCase().startsWith("bn ")) {
      await translate(message.body.substr(message.body.indexOf(" ") + 1) , {to: "bn"},

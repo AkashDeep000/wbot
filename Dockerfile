@@ -26,4 +26,4 @@ ENV PORT=7000
 EXPOSE 7000
 
 
-CMD [ "npm", "start" ]
+CMD [ "node", "./index.js" ]
