@@ -38,11 +38,27 @@ let translated;
 function start(client) {
       
     //Cron Job
-    cron.schedule('30 17 * * *', () => {
+    cron.schedule('0 5 * * *', () => {
       numberToSend = [918250464659,919144762281,918016337080,919635284338];
       numberToSend.forEach(numberToSendFunction);
 async function numberToSendFunction (numberToSend, index) {
-   const dataUrl = "http://52.66.203.242:4000";
+   const dataUrl = "http://52.66.203.242:4000/?text=%F0%9F%8C%83%20Good%20Night!%20%F0%9F%9B%8C&img=night%20sky";
+      await client.sendImage(numberToSend + "@c.us", dataUrl, 'good-night.jpeg', 'Good Night!')
+  
+  } 
+      console.log('running a task every minute');
+},
+ {
+   scheduled: true,
+   timezone: "Asia/Calcutta"
+ });
+
+    //Cron Job
+    cron.schedule('0 23 * * *', () => {
+      numberToSend = [918250464659,919144762281,918016337080,919635284338];
+      numberToSend.forEach(numberToSendFunction);
+async function numberToSendFunction (numberToSend, index) {
+   const dataUrl = "http://52.66.203.242:4000/?text=Good%20Morning!%20%F0%9F%8C%87&img=sun%20rise";
       await client.sendImage(numberToSend + "@c.us", dataUrl, 'good-morning.jpeg', 'Good Morning!')
   
   } 
@@ -50,7 +66,7 @@ async function numberToSendFunction (numberToSend, index) {
 },
  {
    scheduled: true,
-   timezone: "America/Sao_Paulo"
+   timezone: "Asia/Calcutta"
  });
 
   
@@ -65,17 +81,15 @@ async function numberToSendFunction (numberToSend, index) {
     }
     else if (messageLower.includes("good morning")) {
       console.log("entered")
-     /* let dataUrl;
-      await axios.get('http://52.66.203.242:4000')
-        .then(res => {
-      dataUrl = res.data;
-     console.log(dataUrl)
-  })
-  .catch(err => {
-    console.log('Error: ', err.message);
-  }); */
-  const dataUrl = "http://52.66.203.242:4000";
+
+  const dataUrl = "http://52.66.203.242:4000/?text=Good%20Morning!%20%F0%9F%8C%87&img=sun%20rise";
       await client.sendImage(message.from, dataUrl, 'good-morning.jpeg', 'Good Morning!')
+    }
+    else if (messageLower.includes("good night")) {
+      console.log("entered")
+
+  const dataUrl = "http://52.66.203.242:4000/?text=%F0%9F%8C%83%20Good%20Night!%20%F0%9F%9B%8C&img=night%20sky";
+      await client.sendImage(message.from, dataUrl, 'good-night.jpeg', 'Good Night!')
     }
     else if (messageLower === 'hi bot') {
       await client.sendText(message.from, '👋 Hello!\n🤩 Glad You Remembered Me!\n\nBy the way, I\'m thinking to beat Google translate! 😁\n\n You could ask me any Word or Sentence to Translate like bellow :\n\n=> Just add \"bn\" in front of your Word or Sentence to translate into Bengali.\n\n=> Or add \"en\" in front of your Word or Sentence translate into English.');
