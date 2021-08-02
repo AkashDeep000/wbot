@@ -12,7 +12,10 @@
   "dependencies": {
     "@open-wa/wa-automate": "^4.12.3",
     "@vitalets/google-translate-api": "^7.0.0",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "node-cron": "^3.0.0",
+    "node-html-to-image": "^3.2.0"
   }
 }
