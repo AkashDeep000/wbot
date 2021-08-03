@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@open-wa/wa-automate": "^4.12.3",
+    "@open-wa/wa-automate": "^4.13.0",
     "@vitalets/google-translate-api": "^7.0.0",
     "axios": "^0.21.1",
     "express": "^4.17.1",
