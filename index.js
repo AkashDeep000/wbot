@@ -42,7 +42,7 @@ function start(client) {
       numberToSend = [918250464659,919144762281,918016337080,919635284338];
       numberToSend.forEach(numberToSendFunction);
 async function numberToSendFunction (numberToSend, index) {
-   const dataUrl = "http://52.66.203.242:5000/?text=%F0%9F%8C%83%20Good%20Night!%20%F0%9F%9B%8C&img=night%20sky";
+   const dataUrl = "http://13.233.238.26:4000/?text=%F0%9F%8C%83%20Good%20Night!%20%F0%9F%9B%8C&img=night%20sky";
       await client.sendImage(numberToSend + "@c.us", dataUrl, 'good-night.jpeg', 'Good Night!')
   
   } 
@@ -58,7 +58,7 @@ async function numberToSendFunction (numberToSend, index) {
       numberToSend = [918250464659,919144762281,918016337080,919635284338];
       numberToSend.forEach(numberToSendFunction);
 async function numberToSendFunction (numberToSend, index) {
-   const dataUrl = "http://52.66.203.242:5000/?text=Good%20Morning!%20%F0%9F%8C%87&img=sun%20rise";
+   const dataUrl = "http://13.233.238.26:4000/?text=Good%20Morning!%20%F0%9F%8C%87&img=sun%20rise";
       await client.sendImage(numberToSend + "@c.us", dataUrl, 'good-morning.jpeg', 'Good Morning!')
   
   } 
@@ -82,13 +82,13 @@ async function numberToSendFunction (numberToSend, index) {
     else if (messageLower.includes("good morning")) {
       console.log("entered")
 
-  const dataUrl = "http://52.66.203.242:5000/?text=Good%20Morning!%20%F0%9F%8C%87&img=sun%20rise";
+  const dataUrl = "http://13.233.238.26:4000/?text=Good%20Morning!%20%F0%9F%8C%87&img=sun%20rise";
       await client.sendImage(message.from, dataUrl, 'good-morning.jpeg', 'Good Morning!')
     }
     else if (messageLower.includes("good night")) {
       console.log("entered")
 
-  const dataUrl = "http://52.66.203.242:5000/?text=%F0%9F%8C%83%20Good%20Night!%20%F0%9F%9B%8C&img=night%20sky";
+  const dataUrl = "http://13.233.238.26:4000/?text=%F0%9F%8C%83%20Good%20Night!%20%F0%9F%9B%8C&img=night%20sky";
       await client.sendImage(message.from, dataUrl, 'good-night.jpeg', 'Good Night!')
     }
     else if (messageLower === 'hi bot') {
