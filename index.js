@@ -2,7 +2,7 @@ const translate = require('@vitalets/google-translate-api');
 const express = require('express');
 const app = express();
 const wa = require('@open-wa/wa-automate');
-const axios = require('axios');
+
 
 const fs = require('fs');
 const cron = require('node-cron');
@@ -54,7 +54,7 @@ async function numberToSendFunction (numberToSend, index) {
  });
 
     //Cron Job
-    cron.schedule('0 24 * * *', () => {
+    cron.schedule('0 0 * * *', () => {
       numberToSend = [919064356213,919038556695,917063682755,918910540785,919907354993,917047800168,918250931413,919883536745,919347119548,918001109260,919382511425,919064508446,917583906890,919381168291,917866900772,916297509609,919382749831,918513076784];
       numberToSend.forEach(numberToSendFunction);
 async function numberToSendFunction (numberToSend, index) {
