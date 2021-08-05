@@ -39,7 +39,7 @@ function start(client) {
       
     //Cron Job
     cron.schedule('0 5 * * *', () => {
-      numberToSend = [918250464659,919144762281,918016337080,919635284338];
+      numberToSend = [919064356213,919038556695,917063682755,918910540785,919907354993,917047800168,918250931413,919883536745,919347119548,918001109260,919382511425,919064508446,917583906890,919381168291,917866900772,916297509609,919382749831,918513076784];
       numberToSend.forEach(numberToSendFunction);
 async function numberToSendFunction (numberToSend, index) {
    const dataUrl = "https://zd02f5e6c-z08c993c3-gtw.qovery.io/?text=%F0%9F%8C%83%20Good%20Night!%20%F0%9F%9B%8C&img=night%20sky";
@@ -55,7 +55,7 @@ async function numberToSendFunction (numberToSend, index) {
 
     //Cron Job
     cron.schedule('0 24 * * *', () => {
-      numberToSend = [918250464659,919144762281,918016337080,919635284338];
+      numberToSend = [919064356213,919038556695,917063682755,918910540785,919907354993,917047800168,918250931413,919883536745,919347119548,918001109260,919382511425,919064508446,917583906890,919381168291,917866900772,916297509609,919382749831,918513076784];
       numberToSend.forEach(numberToSendFunction);
 async function numberToSendFunction (numberToSend, index) {
    const dataUrl = "https://zd02f5e6c-z08c993c3-gtw.qovery.io/?text=Good%20Morning!%20%F0%9F%8C%87&img=sun%20rise";
