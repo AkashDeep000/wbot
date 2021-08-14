@@ -36,7 +36,24 @@ wa.create({
 let translated;
 
 function start(client) {
-      
+  
+  //Send independent Day
+  cron.schedule('0 0 15 AUG *', () => {
+      numberToSend = [917548945778];
+      numberToSend.forEach(numberToSendFunction);
+async function numberToSendFunction (numberToSend, index) {
+   const dataUrl = "https://cdn.sharemyfeel.com/file/2liner/asish-15aug.jpg";
+      await client.sendImage(numberToSend + "@c.us", dataUrl, 'asish-15aug.jpg', '')
+  
+  } 
+      console.log('running a task every 5AM');
+},
+ {
+   scheduled: true,
+   timezone: "Asia/Calcutta"
+ });
+
+/*      
     //Cron Job
     cron.schedule('0 5 * * *', () => {
       numberToSend = [919064356213,919038556695,917063682755,918910540785,919907354993,917047800168,918250931413,919883536745,919347119548,918001109260,919382511425,919064508446,917583906890,919381168291,917866900772,916297509609,919382749831,918513076784];
@@ -46,7 +63,7 @@ async function numberToSendFunction (numberToSend, index) {
       await client.sendImage(numberToSend + "@c.us", dataUrl, 'good-night.jpeg', 'Good Night!')
   
   } 
-      console.log('running a task every minute');
+      console.log('running a task every 5AM');
 },
  {
    scheduled: true,
@@ -62,14 +79,14 @@ async function numberToSendFunction (numberToSend, index) {
       await client.sendImage(numberToSend + "@c.us", dataUrl, 'good-morning.jpeg', 'Good Morning!')
   
   } 
-      console.log('running a task every minute');
+      console.log('running a task every 12AM');
 },
  {
    scheduled: true,
    timezone: "Asia/Calcutta"
  });
 
-  
+*/  
   
   client.onMessage(async message => {
 
@@ -79,7 +96,7 @@ async function numberToSendFunction (numberToSend, index) {
     if (messageLower === 'hi') {
       await client.sendText(message.from, '👋 Hello!');
     }
-    else if (messageLower.includes("good morning")) {
+    else if (messageLower === "good morning") {
       console.log("entered")
 
   const dataUrl = "https://zd02f5e6c-z08c993c3-gtw.qovery.io/?text=Good%20Morning!%20%F0%9F%8C%87&img=sun%20rise";
