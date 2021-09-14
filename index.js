@@ -37,21 +37,7 @@ let translated;
 
 function start(client) {
   
-  //Send independent Day
-  cron.schedule('0 0 15 AUG *', () => {
-      numberToSend = [917548945778];
-      numberToSend.forEach(numberToSendFunction);
-async function numberToSendFunction (numberToSend, index) {
-   const dataUrl = "https://cdn.sharemyfeel.com/file/2liner/asish-15aug.jpg";
-      await client.sendImage(numberToSend + "@c.us", dataUrl, 'asish-15aug.jpg', '')
-  
-  } 
-      console.log('running a task every 5AM');
-},
- {
-   scheduled: true,
-   timezone: "Asia/Calcutta"
- });
+
 
 /*      
     //Cron Job
@@ -94,6 +80,7 @@ async function numberToSendFunction (numberToSend, index) {
     console.log(message);
     const messageLower = message.body.toLowerCase();
     if (messageLower === 'hi') {
+    
       await client.sendText(message.from, '👋 Hello!');
     }
     else if (messageLower === "good morning") {
